@@ -10,6 +10,7 @@ In synchronous communications, Clock should be same for every module. It would b
 ![image](https://github.com/lakshmi-ummidi/UART_Protocol_Design/assets/86336157/b09d35b6-03db-4d91-a1bd-48b34df75f6c)
 
 (B)UART Transmitter
+
 UART Transmitter take the parallel data from memory, add start, parity, and stop to it and then send data frame to receiver serially. UART Transmitter module has four submodules. i.e., Transmitter FSM, Parity Generator, PISO, Mux4to1.
 
 ![image](https://github.com/lakshmi-ummidi/UART_Protocol_Design/assets/86336157/7fb8a43b-9746-4440-9cc0-65feaeb57c3e)
@@ -27,6 +28,7 @@ UART Transmitter take the parallel data from memory, add start, parity, and stop
 ![image](https://github.com/lakshmi-ummidi/UART_Protocol_Design/assets/86336157/2b4e82d8-110e-40bc-bc5d-ffd491989cb2)
 
 (C)UART Receiver
+
 UART Receiver will receive the data from transmitter and extract the data from data frame. The speed of receiver should be same as transmitter. UART receiver has five submodules. i.e., Start bit detector, Receiver FSM, SIPO, Parity Checker, Stop bit checker. 
 ![image](https://github.com/lakshmi-ummidi/UART_Protocol_Design/assets/86336157/7925161b-aca9-4bce-b42c-fb3f05816fd4)
 1.	Start Bit Detector: Receiver will receive a steady high initially for every data stream, when there is a transition of active high to active low signal, it indicates the start bit.
